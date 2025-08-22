@@ -7,7 +7,7 @@
   "version": "1.0.0",
   "description": "",
   "license": "MIT",
-  "author": "",
+  "author": "Andrew R. Lachance",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "files": [
