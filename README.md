@@ -10,12 +10,8 @@ A Node.js utility for converting JavaScript files to TypeScript. This tool helps
 
 ## Installation
 
-Clone the repository and install dependencies:
-
 ```bash
-git clone https://github.com/yourusername/typescript-converter.git
-cd typescript-converter
-npm install
+npm install runtime-sampler-code-mod
 ```
 
 ## Usage
