@@ -1,5 +1,5 @@
 {
-  "name": "runtime-sampler",
+  "name": "runtime-sampler-code-mod",
   "version": "1.0.0",
   "description": "",
   "license": "MIT",
@@ -9,9 +9,7 @@
   "files": [
     "lib/**/*"
   ],
-  "bin": {
-    "apply-code-mod": "./scripts/main.js"
-  },
+  "bin": "./scripts/main.js",
   "scripts": {
     "build": "tsc",
     "tsc": "tsc",
