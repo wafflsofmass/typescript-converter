@@ -9,6 +9,9 @@
   "files": [
     "lib/**/*"
   ],
+  "bin": {
+    "apply-code-mod": "./scripts/main.js"
+  },
   "scripts": {
     "build": "tsc",
     "tsc": "tsc",
