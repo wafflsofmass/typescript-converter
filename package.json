@@ -1,5 +1,9 @@
 {
   "name": "runtime-sampler-code-mod",
+  "repository": {
+  "type": "git",
+  "url": "https://github.com/wafflsofmass/typescript-converter.git"
+},
   "version": "1.0.0",
   "description": "",
   "license": "MIT",
