@@ -22,17 +22,6 @@ Run the converter from the command line:
 npm runtime-sampler-code-mod BASE_DIRECTORY <base-directory-of-lambda> LAMBDA_NAME <name-of-lambda>
 ```
 
-### Options
-
-- `--dry-run` : Show what would be converted without making changes
-- `--annotate` : Attempt to add basic type annotations
-
-## Example
-
-```bash
-node index.js ./src --annotate
-```
-
 ## Contributing
 
 Pull requests and issues are welcome!
