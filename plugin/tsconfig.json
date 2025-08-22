@@ -1,0 +1,15 @@
+        {
+            "compilerOptions": {
+                "target": "es6",
+                "module": "node20",
+                "outDir": "lib",
+                "declaration": true,
+                "strict": true,
+                "esModuleInterop": true,
+                "types": [
+                    "node"
+                ]
+            },
+            "include": ["src"],
+            "exclude": ["lib"]
+        }
