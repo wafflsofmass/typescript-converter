@@ -4,7 +4,7 @@
     "type": "git",
     "url": "https://github.com/wafflsofmass/typescript-converter.git"
   },
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "Modifies code of an AWS Lambda to capture function arguments, argument mutations, and function return values and store them in an S3 bucket.",
   "license": "MIT",
   "author": "Andrew R. Lachance",

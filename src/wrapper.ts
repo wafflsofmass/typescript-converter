@@ -1,5 +1,5 @@
 const argsExtractor = `
-    const argsExtractor = (...args) -> {
+    const argsExtractor = (...args) => {
         let argStrings = [];
         for (let i = 0; i < arguments.length; i++) {
             let arg = arguments[i];
@@ -39,17 +39,16 @@ const wrapper = ({
     lambdaName, 
     argumentNames, 
     lineNumber, 
-    fileName, 
-    isAsync 
+    fileName
 }: { 
     functionName: string, 
     lambdaName: string, 
-    argumentNames: string, 
+    argumentNames: string[], 
     lineNumber: string, 
-    fileName: string, 
-    isAsync: boolean 
+    fileName: string
 }) => `
-(${isAsync ? 'async ' : ' '}(...args) => {
+
+(async (...args) => {
 
     ${argsExtractor};
     ${resultsExtractor};
@@ -58,13 +57,14 @@ const wrapper = ({
     const mutatedArgString = argsExtractor(args);
     const resultsString = resultsExtractor(results);
     await saveObjects({
-        bucket: ${ lambdaName },
-        key: ${ fileName }/${ functionName }/${ lineNumber },
+        bucket: '${ lambdaName }',
+        key: '${ fileName }/${ functionName }/${ lineNumber }',
         body: '[' + argString + ',' + mutatedArgString + ',' + resultsString + ']'
     });
 
     return results;
-})(${ argumentNames });
+})(${ argumentNames.join(', ') })
+
 `
 
 export default wrapper

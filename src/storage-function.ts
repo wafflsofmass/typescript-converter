@@ -18,11 +18,7 @@ export default async function pluginSendObjects({
 export default function addStorageFile(packageDir: string) {
     if(!existsSync(packageDir)) throw new Error('Directory must contain package.json')
 
-    const packageManifest = readFileSync(packageDir, 'utf-8')
-
-    const { main }: { main: string } = JSON.parse(packageManifest)
-
-    const storageFunctionPath = main.replace(/\/[^\/]+$/, '/plugin-storage.js')
+    const storageFunctionPath = packageDir.replace(/\/[^\/]+$/, '/plugin-storage.js')
     
     writeFileSync(storageFunctionPath, storage)
 }
