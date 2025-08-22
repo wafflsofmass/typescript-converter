@@ -2,12 +2,6 @@
 
 A Node.js utility for converting JavaScript files to TypeScript. This tool helps automate the migration of JS codebases to TypeScript by renaming files and optionally adding basic type annotations.
 
-## Features
-
-- Batch conversion of `.js` files to `.ts`
-- Optional type inference and annotation
-- CLI interface for easy usage
-
 ## Installation
 
 ```bash
