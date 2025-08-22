@@ -14,8 +14,9 @@ const {
   LAMBDA_NAME
 } = args
 
-if(!BASE_DIRECTORY) throw new Error('Must contain a BASE_DIRECTORY argument')
-if(!LAMBDA_NAME) throw new Error('Must contain a LAMBDA_NAME argument')
+if(!BASE_DIRECTORY && !LAMBDA_NAME) return console.log('Must contain a LAMBDA_NAME & BASE_DIRECTORY arguments')
+if(!BASE_DIRECTORY) return console.log('Must contain a BASE_DIRECTORY argument')
+if(!LAMBDA_NAME) return console.log('Must contain a LAMBDA_NAME argument')
 
 const plugin = require('../lib/index.js').default
 
