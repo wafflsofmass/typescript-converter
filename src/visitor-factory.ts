@@ -53,7 +53,7 @@ export default class VisitorFactory {
     }
 
     extractFunctionName(node: t.CallExpression): string | undefined {
-        return console.log(getIdentifierChain(node.callee)) ?? getIdentifierChain(node.callee);
+        return getIdentifierChain(node.callee);
     }
 
     extractWrapperArgs({ node }: { node: t.CallExpression }) {
