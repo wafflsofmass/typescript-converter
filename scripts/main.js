@@ -14,11 +14,11 @@ const {
   LAMBDA_NAME
 } = args
 
+const plugin = require('../lib/index.js').default
+
 if(!BASE_DIRECTORY && !LAMBDA_NAME) return console.log('Must contain a LAMBDA_NAME & BASE_DIRECTORY arguments')
 if(!BASE_DIRECTORY) return console.log('Must contain a BASE_DIRECTORY argument')
 if(!LAMBDA_NAME) return console.log('Must contain a LAMBDA_NAME argument')
-
-const plugin = require('../lib/index.js').default
 
 plugin({ 
     baseDirectory: BASE_DIRECTORY, 
