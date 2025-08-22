@@ -1,6 +1,7 @@
 import replace from "./function-replacer";
 import { getAllFilePaths } from "./file-utils";
 import { writeFileSync } from "fs";
+import addStorageFile from "./storage-function";
 
 // const [arg1, arg1V, arg2, arg2V] = process.argv.slice(-4)
 
@@ -22,5 +23,10 @@ export default function plugin({
   importSource: string,
   importSpecifier: string,
 }) {
-  getAllFilePaths(baseDirectory).forEach(filePath => writeFileSync(filePath, replace(lambdaName, filePath, importSource, importSpecifier)))
+
+  const allFilePaths = getAllFilePaths(baseDirectory)
+  const packageJsonPaths = allFilePaths.filter(path => /package.json$/.test(path))
+
+  packageJsonPaths.forEach(addStorageFile)
+  allFilePaths.forEach(filePath => writeFileSync(filePath, replace(lambdaName, filePath, importSource, importSpecifier)))
 }

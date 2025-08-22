@@ -7,6 +7,9 @@ export function getAllFilePaths (folderPath: string) {
   const entries = readdirSync(folderPath, { withFileTypes: true });
 
   for (const entry of entries) {
+    
+    if(entry.name.includes('node_modules')) continue
+
     const entryPath = path.join(folderPath, entry.name);
 
     if (entry.isFile()) {

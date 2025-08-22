@@ -33,6 +33,7 @@ const resultsExtractor = (res) => {
 }
 `
 
+
 const wrapper = ({ 
     functionName, 
     lambdaName, 
@@ -60,7 +61,7 @@ const wrapper = ({
         bucket: ${ lambdaName },
         key: ${ fileName }/${ functionName }/${ lineNumber },
         body: '[' + argString + ',' + mutatedArgString + ',' + resultsString + ']'
-        });
+    });
 
     return results;
 })(${ argumentNames });
