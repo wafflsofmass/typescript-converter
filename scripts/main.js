@@ -5,8 +5,8 @@ const formatArgName = x => x.replaceAll('-', '_').toLocaleUpperCase()
 const [arg1, arg1V, arg2, arg2V] = process.argv.slice(-4)
 
 const args = {
-  [formatArgName(arg1)]: arg1V,
-  [formatArgName(arg2)]: arg2V
+  [formatArgName(arg1 ?? '')]: arg1V,
+  [formatArgName(arg2 ?? '')]: arg2V
 }
 
 const {
