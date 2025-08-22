@@ -1,7 +1,7 @@
 import replace from "./function-replacer";
+import addStorageFile from "./storage-function";
 import { getAllFilePaths } from "./file-utils";
 import { writeFileSync } from "fs";
-import addStorageFile from "./storage-function";
 
 export default function plugin({
   baseDirectory,
